@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Edukasi Kelas 5 SD/MI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🎮 Game Edukasi Kelas 5</h1>
+  <button onclick="toggleModeGuru()">🔐 Mode Guru</button>
+</header>
+
+<!-- MAPEL -->
+<section class="mapel">
+  <h2>Pilih Mata Pelajaran</h2>
+  <div class="mapel-cards">
+    <div class="mapel-card mtk" onclick="bukaMapel('mtk')">➕<br>Matematika</div>
+    <div class="mapel-card indo" onclick="bukaMapel('indo')">📖<br>B. Indonesia</div>
+    <div class="mapel-card ip" onclick="bukaMapel('ip')">🌍<br>IPAS</div>
+    <div class="mapel-card pai" onclick="bukaMapel('pai')">🕌<br>PAI</div>
+  </div>
+</section>
+
+<!-- MODE GURU -->
+<section class="guru hidden" id="guruSection">
+  <h2>🧑‍🏫 Mode Guru – Bank Soal</h2>
+
+  <select id="mapelGuru">
+    <option value="mtk">Matematika</option>
+    <option value="indo">Bahasa Indonesia</option>
+    <option value="ip">IPAS</option>
+    <option value="pai">PAI</option>
+  </select>
+
+  <select id="jenisSoal">
+    <option value="kuis">Soal Kuis</option>
+    <option value="game">Soal Mini Game</option>
+  </select>
+
+  <input id="soalBaru" placeholder="Tulis soal">
+  <input id="opsiA" placeholder="Opsi A">
+  <input id="opsiB" placeholder="Opsi B">
+  <input id="opsiC" placeholder="Opsi C">
+
+  <select id="jawabanBenar">
+    <option value="0">Jawaban Benar: A</option>
+    <option value="1">Jawaban Benar: B</option>
+    <option value="2">Jawaban Benar: C</option>
+  </select>
+
+  <button onclick="tambahSoal()">➕ Simpan Soal</button>
+
+  <div id="daftarSoal"></div>
+</section>
+
+<!-- KELOMPOK -->
+<section class="kelompok">
+  <h2>👥 Kelompok</h2>
+  <input type="number" id="jumlahKelompok" min="2" max="6" value="2">
+  <button onclick="buatKelompok()">Buat Kelompok</button>
+</section>
+
+<section class="skor" id="skorArea"></section>
+
+<!-- GAME AREA -->
+<section class="kuis hidden" id="kuisSection">
+  <div class="quiz-card">
+    <h3 id="infoKelompok"></h3>
+    <h2 id="soal"></h2>
+
+    <button class="opsi" onclick="jawab(0)" id="opsi0"></button>
+    <button class="opsi" onclick="jawab(1)" id="opsi1"></button>
+    <button class="opsi" onclick="jawab(2)" id="opsi2"></button>
+
+    <div id="hasil"></div>
+
+    <button class="next" onclick="lanjut()">➡️ Berikutnya</button>
+    <button class="juara" onclick="lihatJuara()">🏆 Juara</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
