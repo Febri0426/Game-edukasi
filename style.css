@@ -1,234 +1,43 @@
 /* RESET */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Baloo 2', cursive; background: linear-gradient(180deg, #dff3ff, #fff); text-align:center; color:#333; padding-bottom:50px; }
 
-/* BODY */
-body {
-  margin: 0;
-  font-family: 'Baloo 2', cursive;
-  background: linear-gradient(180deg, #dff3ff, #fff);
-  text-align: center;
-  color: #333;
-}
+header { background: linear-gradient(90deg,#ff922b,#ff6b6b); padding:20px; color:white; }
+header h1 { font-size:28px; }
+header button { margin-top:10px; padding:10px 18px; border-radius:20px; border:none; background:white; color:#ff6b6b; font-weight:bold; cursor:pointer; }
 
-/* HEADER */
-header {
-  background: linear-gradient(90deg, #ff922b, #ff6b6b);
-  padding: 20px;
-  color: white;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 32px;
-}
-
-header button {
-  margin-top: 10px;
-  padding: 10px 18px;
-  border-radius: 20px;
-  border: none;
-  background: white;
-  color: #ff6b6b;
-  font-size: 16px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* SECTION */
-section {
-  margin: 30px auto;
-  padding: 10px;
-}
+section { margin:20px auto; padding:10px; }
 
 /* MAPEL */
-.mapel h2 {
-  font-size: 26px;
-}
-
-.mapel-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  max-width: 1100px;
-  margin: 30px auto;
-  padding: 10px;
-}
-
-.mapel-card {
-  padding: 40px 15px;
-  border-radius: 30px;
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.mapel-card:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
-
-.mtk { background: #ff6b6b; }
-.indo { background: #4dabf7; }
-.ip { background: #51cf66; }
-.pai { background: #845ef7; }
+.mapel h2 { font-size:24px; margin-bottom:15px; }
+.mapel-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:20px; max-width:1000px; margin:0 auto; }
+.mapel-card { padding:30px 10px; border-radius:25px; font-size:18px; font-weight:bold; color:white; cursor:pointer; box-shadow:0 8px 15px rgba(0,0,0,0.15); transition:0.2s; }
+.mapel-card:hover { transform: translateY(-5px) scale(1.05); box-shadow:0 12px 25px rgba(0,0,0,0.2); }
+.mtk { background:#ff6b6b; } .indo { background:#4dabf7; } .ip { background:#51cf66; } .pai { background:#845ef7; }
 
 /* MODE GURU */
-.guru {
-  background: white;
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 30px;
-  border-radius: 30px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.guru h2 {
-  grid-column: span 3;
-  margin-bottom: 10px;
-}
-
-.guru input,
-.guru select {
-  padding: 14px;
-  border-radius: 15px;
-  font-size: 16px;
-  border: 2px solid #ddd;
-}
-
-.guru button {
-  grid-column: span 3;
-  padding: 16px;
-  border-radius: 20px;
-  font-size: 18px;
-  background: #ff922b;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-#daftarSoal {
-  grid-column: span 3;
-  background: #f8f9fa;
-  border-radius: 20px;
-  padding: 15px;
-  text-align: left;
-  max-height: 250px;
-  overflow-y: auto;
-}
+.guru { background:white; max-width:1000px; margin:20px auto; padding:20px; border-radius:25px; box-shadow:0 10px 25px rgba(0,0,0,0.15); }
+.guru-form { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:15px; }
+.guru input, .guru select, .guru button { padding:10px; border-radius:15px; font-size:14px; border:2px solid #ddd; }
+.guru button { grid-column:span 3; background:#ff922b; color:white; font-weight:bold; }
 
 /* KELOMPOK */
-.kelompok {
-  max-width: 600px;
-  margin: auto;
-}
-
-.kelompok input {
-  padding: 12px;
-  width: 120px;
-  border-radius: 15px;
-  border: 2px solid #ccc;
-  font-size: 16px;
-}
-
-.kelompok button {
-  padding: 12px 18px;
-  border-radius: 18px;
-  border: none;
-  background: #51cf66;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  margin-left: 10px;
-}
+.kelompok input { padding:10px; width:100px; border-radius:12px; border:2px solid #ccc; }
+.kelompok button { padding:10px 15px; border-radius:15px; border:none; background:#51cf66; color:white; cursor:pointer; margin-left:10px; }
 
 /* SKOR */
-.skor {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
+.skor { display:flex; justify-content:center; flex-wrap:wrap; gap:15px; margin-top:15px; }
+.skor div { background:white; padding:10px 15px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.15); font-size:16px; }
 
-.skor div {
-  background: white;
-  padding: 15px 25px;
-  border-radius: 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  font-size: 18px;
-}
+/* QUIZ / MINI GAME */
+.quiz-card { background:white; max-width:600px; margin:20px auto; padding:25px; border-radius:25px; box-shadow:0 10px 25px rgba(0,0,0,0.15); }
+.quiz-card h2 { font-size:22px; margin:10px 0; }
+.timer { font-size:18px; margin-bottom:10px; }
+.opsi { width:100%; padding:12px; margin-top:10px; font-size:18px; border-radius:15px; border:none; background:#4dabf7; color:white; font-weight:bold; cursor:pointer; transition:0.2s; }
+.opsi:hover { background:#339af0; transform:scale(1.02); }
+.next, .juara { margin-top:10px; padding:10px 18px; border-radius:15px; border:none; font-size:14px; cursor:pointer; }
+.next { background:#51cf66; color:white; }
+.juara { background:#845ef7; color:white; margin-left:10px; }
 
-/* QUIZ / GAME */
-.quiz-card {
-  background: white;
-  max-width: 650px;
-  margin: 40px auto;
-  padding: 35px;
-  border-radius: 35px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-.quiz-card h2 {
-  font-size: 26px;
-}
-
-.opsi {
-  width: 100%;
-  padding: 16px;
-  margin-top: 15px;
-  font-size: 20px;
-  border-radius: 20px;
-  border: none;
-  background: #4dabf7;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s, transform 0.1s;
-}
-
-.opsi:hover {
-  background: #339af0;
-  transform: scale(1.02);
-}
-
-/* BUTTON BAWAH */
-.next, .juara {
-  margin-top: 15px;
-  padding: 14px 22px;
-  border-radius: 20px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.next {
-  background: #51cf66;
-  color: white;
-}
-
-.juara {
-  background: #845ef7;
-  color: white;
-  margin-left: 10px;
-}
-
-/* HASIL */
-#hasil {
-  font-size: 22px;
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-/* HIDDEN */
-.hidden {
-  display: none;
-}
+.hidden { display:none; }
+#gameArea { margin-top:10px; min-height:100px; }
